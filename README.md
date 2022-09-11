@@ -2,6 +2,7 @@
 # to-do List
 
 - [Layout de base](https://www.figma.com/file/5q5f4nzDGCe5F9h1HwZaFy/ToDo-List-(Copy)?node-id=0%3A1)
+- Projeto de especialização em React - Ignite - da Rocketseat.
 
 ## 📲 Link do deploy
 
