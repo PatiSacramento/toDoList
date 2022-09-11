@@ -14,6 +14,7 @@ export const HeaderContainer = styled.header`
 
     background-color: ${props => props.theme.colors.gray[700]};
     height: 12.5rem;
+    width: 100%;
    
     img {
         margin-right: 0.75rem;

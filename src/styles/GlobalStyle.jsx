@@ -11,7 +11,6 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background-color: ${props => props.theme.colors.gray[600]};
         font-family: "Inter", sans-serif;
-        min-width: 90rem;
 
     }
 
