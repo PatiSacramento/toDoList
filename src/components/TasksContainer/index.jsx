@@ -1,7 +1,7 @@
-import { Container, TasksCount, Text, TasksListContainer, TextEmptyList, TextsContainer, ClipboardImage, Counter, TextCounter } from "./styled"
-import Clipboard from "./../../assets/Clipboard.png"
+import { Container, TasksCount, Text, TasksListContainer, Counter, TextCounter } from "./styled"
 import { Tasks } from "./../Tasks"
 import { useState } from "react"
+import { EmptyTaskList } from "../EmptyTaskList"
 
 
 
@@ -26,28 +26,22 @@ export const TasksContainer = ({ tasksList, tasksCreated, setTasksList, setTasks
                     }
                 </Counter>    
             </TasksCount>
-            {tasksList && tasksList.length !== 0 ? 
-            <TasksListContainer tasksCreated={tasksCreated}>
-                {tasksList.map((task) => { 
-                    return <Tasks 
-                                key={task} 
-                                task={task} 
-                                tasksCompleted={tasksCompleted} 
-                                setTasksCompleted={setTasksCompleted} 
-                                tasksList={tasksList} 
-                                setTasksList={setTasksList}
-                                tasksCreated={tasksCreated}
-                                setTasksCreated={setTasksCreated}  
-                            />})}
-            </TasksListContainer> 
-            :
-            <TasksListContainer tasksCreated={tasksCreated}>
-                <ClipboardImage src={Clipboard} /> 
-                <TextsContainer>
-                    <TextEmptyList><b>Você ainda não tem tarefas cadastradas</b></TextEmptyList>
-                    <TextEmptyList>Crie tarefas e organize seus itens a fazer</TextEmptyList>
-                </TextsContainer>
-            </TasksListContainer>}
+            {tasksList.length !== 0 ? 
+                <TasksListContainer>
+                    {tasksList.map((task) => { 
+                        return <Tasks 
+                                    key={task} 
+                                    task={task} 
+                                    tasksCompleted={tasksCompleted} 
+                                    setTasksCompleted={setTasksCompleted} 
+                                    tasksList={tasksList} 
+                                    setTasksList={setTasksList}
+                                    tasksCreated={tasksCreated}
+                                    setTasksCreated={setTasksCreated}  
+                                />})}
+                </TasksListContainer> 
+                :
+                <EmptyTaskList />}
         </Container>
     )
 }

@@ -7,12 +7,17 @@ export const HeaderContainer = styled.header`
     align-items: center;
     flex-direction: row;
 
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+
     background-color: ${props => props.theme.colors.gray[700]};
-    min-width: 100%;
     height: 12.5rem;
    
     img {
         margin-right: 0.75rem;
+        max-width: 100%;
     }
 
     h1 {

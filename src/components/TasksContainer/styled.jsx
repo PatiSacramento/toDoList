@@ -43,12 +43,6 @@ export const Text = styled.p`
     color: ${props => props.purple ? props.theme.colors.purple : props.theme.colors.blue};
 `
 
-export const TextEmptyList = styled(Text)` 
-    font-weight: 400;   
-    font-size: ${props => props.theme.fontSizes.large};
-    color: ${props => props.theme.colors.gray[300]};
-`
-
 export const TextCounter = styled(Text)` 
     display: flex;
     flex-direction: ${props => props.tasksCreated !== 0 ? "column" :"row"};
@@ -57,8 +51,8 @@ export const TextCounter = styled(Text)`
     
     background-color: ${props => props.theme.colors.gray[400]}; 
     color: ${props => props.theme.colors.gray[200]};
-    width:${props => props.created ? "3.25rem" : "1rem"};
-    max-height: 1.1875rem;
+    width:${props => props.created ? "3.3rem" : "1.5625rem"};
+    height: 1.1875rem;
     
     border-radius: 999px;
     padding: 0.125rem 0.5rem;
@@ -72,7 +66,7 @@ export const TasksListContainer = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: ${props => props.tasksCreated !== 0 ? "0" : "4rem 1.5rem"};
+    padding: 0;
     box-sizing: border-box;
     width: 46rem;
     height: 15.25rem;
@@ -80,19 +74,4 @@ export const TasksListContainer = styled.div`
     
     border-top: 1px solid ${props => props.theme.colors.gray[400]};
     border-radius: 0.5rem;
-`
-
-export const TextsContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 43rem;
-    height: 2.75rem;
-    line-height: 140%;
-`
-
-export const ClipboardImage = styled.img` 
-    margin-bottom: 1rem;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `

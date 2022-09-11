@@ -1,4 +1,4 @@
-import { IconsContainer, Task, TrashIconContainer, TaskText } from "./styled"
+import { IconsContainer, Task, TrashIconContainer } from "./styled"
 import { Circle, Trash, CheckCircle } from "phosphor-react"
 import { useState } from "react"
 
@@ -50,7 +50,7 @@ export const Tasks = ({ task, tasksCompleted, setTasksCompleted, tasksList, setT
                 { isTaskCompleted ? <CheckCircle size={24} weight="fill"/> : <Circle size={24} />}
             </IconsContainer>
                 
-            <TaskText isTaskCompleted={isTaskCompleted}>{task}</TaskText>
+            <p isTaskCompleted={isTaskCompleted}>{task}</p>
          
             <TrashIconContainer onClick={() => onClickDelete(task)}>
                 <Trash size={24}/>

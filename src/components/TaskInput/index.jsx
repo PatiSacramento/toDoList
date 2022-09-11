@@ -1,22 +1,23 @@
 import { PlusCircle } from "phosphor-react"
-import { Button, InputContainer, InputTask } from "./styled"
+import { InputContainer } from "./styled"
 
 
 
 
-export const TaskInput = ({ task, onChangeInput, addTask}) => {
-
+export const TaskInput = ({ task, onChangeInput, addTask, isTaskEmpty}) => {
+    
     return (
         <InputContainer onSubmit={addTask}>
-            <InputTask 
+            <input 
                 placeholder="Adicione uma nova tarefa"
                 value={task}
                 onChange={onChangeInput}
+                //required
             />
-            <Button type="submit">
+            <button type="submit" disabled={isTaskEmpty}>
                 Criar
                 <PlusCircle />
-            </Button>
+            </button>
         </InputContainer>
     )
 }

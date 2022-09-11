@@ -2,6 +2,7 @@ import { Header } from "../components/Header"
 import { TaskInput } from "../components/TaskInput"
 import { TasksContainer } from "../components/TasksContainer"
 import { useState } from "react"
+import { PageContainer } from "./styled"
 
 
 
@@ -9,6 +10,7 @@ export const Page = () => {
     const [task, setTask] = useState("")
     const [tasksList, setTasksList] = useState([])
     const [tasksCreated, setTasksCreated] = useState(0)
+    const isTaskEmpty = task.length === 0
 
     const onChangeInput = (event) => {
         setTask(event.target.value)
@@ -25,12 +27,13 @@ export const Page = () => {
     }
 
     return(
-        <>
+        <PageContainer>
             <Header/>
             <TaskInput 
                 task={task} 
                 onChangeInput={onChangeInput} 
                 addTask={addTask}
+                isTaskEmpty={isTaskEmpty}
             />
             <TasksContainer 
                 tasksList={tasksList} 
@@ -39,6 +42,6 @@ export const Page = () => {
                 setTasksCreated={setTasksCreated}
             /> 
     
-        </>
+        </PageContainer>
     )
 }
