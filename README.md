@@ -5,7 +5,7 @@
 
 ## 📲 Link do deploy
 
-Use a aplicação [link](https://to-do-list-six-puce.vercel.app/) 
+Use a aplicação no [link](https://to-do-list-six-puce.vercel.app/) 
 
 ## Imagens do projeto
 ![image](https://user-images.githubusercontent.com/99834194/189545463-4893e170-8994-433f-8d3e-149870bb1762.png)
