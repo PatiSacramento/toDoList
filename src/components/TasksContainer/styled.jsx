@@ -73,5 +73,5 @@ export const TasksListContainer = styled.div`
     gap: 0.75rem;
     
     border-top: 1px solid ${props => props.theme.colors.gray[400]};
-    border-radius: 0.5rem;
+    border-radius: 8px;
 `

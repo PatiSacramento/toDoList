@@ -7,7 +7,7 @@ export const Task = styled.div`
     display: flex;
     align-items: flex-start;
 
-    border-radius: 0.5rem;
+    border-radius: 8px;
     padding: 1rem;
     background-color: ${props => props.theme.colors.gray[500]};
     border: 1px solid  ${props => props.theme.colors.gray[400]};
