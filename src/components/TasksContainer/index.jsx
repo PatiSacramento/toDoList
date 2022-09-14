@@ -30,7 +30,7 @@ export const TasksContainer = ({ tasksList, tasksCreated, setTasksList, setTasks
                 <TasksListContainer>
                     {tasksList.map((task) => { 
                         return <Tasks 
-                                    key={task} 
+                                    key={task.id} 
                                     task={task} 
                                     tasksCompleted={tasksCompleted} 
                                     setTasksCompleted={setTasksCompleted} 

@@ -11,7 +11,7 @@ export const Tasks = ({ task, tasksCompleted, setTasksCompleted, tasksList, setT
     const onClickCompleted = (task) => {
         setIsTaskCompleted(!isTaskCompleted)
 
-        const taskIndex = tasksList.findIndex((t) => t === task)
+        const taskIndex = tasksList.findIndex((t) => t.id === task.id)
         
         const listCopy = [...tasksList]
         
@@ -32,7 +32,7 @@ export const Tasks = ({ task, tasksCompleted, setTasksCompleted, tasksList, setT
     }
 
     const onClickDelete = (task) => {
-        const tasksWithoutCompleted = tasksList.filter((t) => {return t !== task})
+        const tasksWithoutCompleted = tasksList.filter((t) => {return t.id !== task.id})
 
         setTasksCreated(tasksCreated - 1)
 
@@ -50,7 +50,7 @@ export const Tasks = ({ task, tasksCompleted, setTasksCompleted, tasksList, setT
                 { isTaskCompleted ? <CheckCircle size={24} weight="fill"/> : <Circle size={24} />}
             </IconsContainer>
                 
-            <p isTaskCompleted={isTaskCompleted}>{task}</p>
+            <p isTaskCompleted={isTaskCompleted}>{task.task}</p>
          
             <TrashIconContainer onClick={() => onClickDelete(task)}>
                 <Trash size={24}/>

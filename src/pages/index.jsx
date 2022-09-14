@@ -19,10 +19,12 @@ export const Page = () => {
     const addTask = (event) => {
         event.preventDefault()
         let newTasksList = [...tasksList]
+        let id = String(new Date().getTime())
 
-        newTasksList.push(task)
+        newTasksList.push({ task, id })
         setTasksList(newTasksList)
         setTasksCreated(tasksCreated+1)
+        console.log(newTasksList)
         setTask("")
     }
 
